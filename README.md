@@ -106,7 +106,7 @@ In IntelliJ IDEA it looks like this:\
 ![running-test-instructions](assets/RunningTestInstructions.png)
 
 
-### Endpoints
+## Endpoints
 
 | Endpoints description                                         | Request | URL                                                | Example value                          | Role           |
 |---------------------------------------------------------------|---------|----------------------------------------------------|----------------------------------------|----------------|
@@ -134,14 +134,14 @@ In IntelliJ IDEA it looks like this:\
 | Display available stock locations                             | GET     | http://localhost:8090/stocklocations               | -                                      | ADMIN          |
 
 
-### Test users
+## Test users
 | User name | Password      | Role  |
 |-----------|---------------|-------|
 | admin     | admin@Test1   | ADMIN |
 | user      | user@Test1    | USER  |
 
 
-### Roles
+## Roles
 There are 3 roles in the application
 - The "GUEST" user doesn't need a login. This user can only request the product data (all, by category and by id) with the image. 
 This person can also send an order.
@@ -151,11 +151,11 @@ the same things as a GUEST user and can also look at the orders and request a li
 locations and upload images.
 
 
-### JSON format examples
+## JSON format examples
 There is a postman collection to test the endpoints. Below you can find a complete overview of all the JSON formats that 
 can be used to address the endpoints.
 
-#### Authentication and authorisation
+### Authentication and authorisation
 Description: Create a USER\
 URL: http://localhost:8090/users \
 Type: POST\
@@ -208,7 +208,7 @@ Body:
     "password": "admin@Test1"
 }
 ```
-#### Product
+### Product
 
 Description: Get all products\
 URL: http://localhost:8090/products  \
@@ -322,7 +322,7 @@ Body:
 ```
 ![upload-image-instruction](assets/UploadImageInstruction.JPG)
 
-#### Image
+### Image
 
 Description: Get image by id\
 URL http://localhost:8090/images/download/aptitlig.jpg \
@@ -334,7 +334,7 @@ Body:
     product name in the url
 ```
 
-#### Order
+### Order
 
 Description: Create order\
 URL: http://localhost:8090/orders \
@@ -383,7 +383,7 @@ Body:
     only order id in the url
 ```
 
-#### Stock Locations
+### Stock Locations
 
 Description: Create a stock location\
 URL: http://localhost:8090/stocklocations \
