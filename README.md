@@ -150,10 +150,10 @@ There is a postman collection to test the endpoints. Below you can find a comple
 can be used to address the endpoints.
 
 #### Authentication and authorisation
+Description: Create a USER\
 URL: http://localhost:8090/users \
 Type: POST\
 Role: ALL\
-Description: Create a USER\
 Additional Information: Your password should contain 6 tot 15 characters with at least one digit, one upper case letter, 
 one lower case letter and one special symbol (“@#$%”) \
 Body:
@@ -165,10 +165,10 @@ Body:
 }
 ```
 
+Description: Create an ADMIN\
 URL: http://localhost:8090/users \
 Type: POST\
 Role: ALL\
-Description: Create an ADMIN\
 Additional Information: Your password should contain 6 tot 15 characters with at least one digit, one upper case letter, 
 one lower case letter and one special symbol (“@#$%”) \
 Body:
@@ -180,10 +180,10 @@ Body:
 }
 ```
 
+Description: Login as a USER\
 URL: http://localhost:8090/auth  \
 Type: POST\
 Role: ALL\
-Description: Login as a USER\
 Body:
 ```yaml
 {
@@ -191,10 +191,10 @@ Body:
     "password": "user@Test1"
 }
 ```
+Description: Login as an ADMIN\
 URL: http://localhost:8090/auth  \
 Type: POST\
 Role: ALL\
-Description: Login as an ADMIN\
 Body:
 ```yaml
 {
@@ -204,10 +204,10 @@ Body:
 ```
 #### Product
 
+Description: Get all products\
 URL: http://localhost:8090/products  \
 Type: GET\
 Role: ALL\
-Description: Get all products\
 Body:
 ```yaml
 {
@@ -215,10 +215,10 @@ Body:
 }
 ```
 
+Description: Get all products by category\
 URL: http://localhost:8090/products?category=cooking  \
 Type: GET\
 Role: ALL\
-Description: Get all products by category\
 Body:
 ```yaml
 {
@@ -227,10 +227,10 @@ Body:
 }
 ```
 
+Description: Get product by id\
 URL: http://localhost:8090/products/1001  \
 Type: GET\
 Role: ALL\
-Description: Get product by id\
 Body:
 ```yaml
 {
@@ -239,10 +239,10 @@ Body:
 }
 ```
 
+Description: Create new product
 URL: http://localhost:8090/products  \
 Type: POST \
 Role: ADMIN\
-Description: Create new product
 Authorisation header: Bearer Token\
 Body:
 ```yaml
@@ -254,10 +254,10 @@ Body:
 }
 ```
 
+Description: Update product
 URL: http://localhost:8090/products/1003 \
 Type: PUT \
 Role: ADMIN\
-Description: Update product
 Additional information: In order to update the image please reassign a new image by making use of the Assing image to
 product endpoint\
 Authorisation header: Bearer Token\
@@ -271,10 +271,10 @@ Body:
 }
 ```
 
+Description: Delete product\
 URL: http://localhost:8090/products/1006  \
 Type: DELETE \
 Role: ADMIN\
-Description: Delete product\
 Additional information: Only products that have never been ordered can be deleted, due to administration reasons.\
 Authorisation header: Bearer Token\
 Body:
@@ -283,10 +283,10 @@ Body:
     only product id in the url
 ```
 
+Description: Assign stock location to product\
 URL: http://localhost:8090/products/1001/stocklocation \
 Type: PUT \
 Role: ADMIN\
-Description: Assign stock location to product\
 Additional information: When assigning a new stock location to a product the old stock location will be released 
 and set available.\
 Authorisation header: Bearer Token\
@@ -300,10 +300,10 @@ Body:
 }
 ```
 
+Description: Assign image to product
 URL: http://localhost:8090/products/1002/image  \
 Type: POST \
 Role: ADMIN\
-Description: Assign image to product
 Additional information: When a product has an image assigned the new image will replace the old image and the old image 
 will be deleted.\
 Authorisation header: Bearer Token\
@@ -317,10 +317,11 @@ Body:
 ![upload-image-instruction](assets/UploadImageInstruction.JPG)
 
 #### Image
+
+Description: Get image by id\
 URL http://localhost:8090/images/download/aptitlig.jpg \
 Type: GET \
 Role: ALL\
-Description: Get image by id\
 Body:
 ```yaml
     no body
@@ -328,10 +329,11 @@ Body:
 ```
 
 #### Order
+
+Description: Create order\
 URL: http://localhost:8090/orders \
 Type: POST\
 Role: ALL\
-Description: Create order\
 Body:
 ```yaml
 {
@@ -343,10 +345,10 @@ Body:
 }
 ```
 
+Description: Get order by id\
 URL: http://localhost:8090/orders/1 \
 Type: GET\
 Role: ADMIN and USER\
-Description: Get order by id\
 Authorisation header: Bearer Token\
 Body:
 ```yaml
@@ -354,20 +356,20 @@ Body:
     only order id in the url
 ```
 
+Description: Get all unpaid orders\
 URL: http://localhost:8090/orders \
 Type: GET\
 Role: ADMIN and USER\
-Description: Get all unpaid orders\
 Authorisation header: Bearer Token\
 Body:
 ```yaml
     no body
 ```
 
+Description: Process payment on an order\
 URL: http://localhost:8090/orders/300 \
 Type: PUT\
 Role: ADMIN and USER\
-Description: Process payment on an order\
 Authorisation header: Bearer Token\
 Body:
 ```yaml
@@ -376,10 +378,11 @@ Body:
 ```
 
 #### Stock Locations
+
+Description: Create a stock location\
 URL: http://localhost:8090/stocklocations \
 Type: POST\
 Role: ADMIN\
-Description: Create a stock location\
 Authorisation header: Bearer Token\
 Body:
 ```yaml
@@ -388,10 +391,10 @@ Body:
 }
 ```
 
+Description: Delete a stock location\
 URL: http://localhost:8090/stocklocations/1 \
 Type: DELETE\
 Role: ADMIN\
-Description: Delete a stock location\
 Authorisation header: Bearer Token\
 Body:
 ```yaml
@@ -399,10 +402,10 @@ Body:
     only order id in the url
 ```
 
+Description: Get all available stock location\
 URL: http://localhost:8090/stocklocations \
 Type: GET\
 Role: ADMIN\
-Description: Get all available stock location\
 Authorisation header: Bearer Token\
 Body:
 ```yaml
