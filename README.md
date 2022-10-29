@@ -17,11 +17,11 @@
 * Test users
 * Roles
 * JSON format examples
- - Authentication and authorisation
- - Product
- - Image
- - Order
- - Stock location
+  - Authentication and authorisation
+  - product
+  - Image
+  - Order
+  - Stock location
 
 
 ## Introduction
