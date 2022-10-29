@@ -16,6 +16,12 @@
 * Endpoints
 * Test users
 * Roles
+* JSON format examples
+ - Authentication and authorisation
+ - Product
+ - Image
+ - Order
+ - Stock location
 
 
 ## Introduction
@@ -145,7 +151,7 @@ the same things as a GUEST user and can also look at the orders and request a li
 locations and upload images.
 
 
-### Examples
+### JSON format examples
 There is a postman collection to test the endpoints. Below you can find a complete overview of all the JSON formats that 
 can be used to address the endpoints.
 
@@ -254,7 +260,7 @@ Body:
 }
 ```
 
-Description: Update product
+Description: Update product \
 URL: http://localhost:8090/products/1003 \
 Type: PUT \
 Role: ADMIN\
