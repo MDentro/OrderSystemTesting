@@ -383,7 +383,7 @@ Body:
     only order id in the url
 ```
 
-### Stock Locations
+### Stock Location
 
 Description: Create a stock location\
 URL: http://localhost:8090/stocklocations \
