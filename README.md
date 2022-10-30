@@ -245,7 +245,7 @@ Body:
 }
 ```
 
-Description: Create new product
+Description: Create new product \
 URL: http://localhost:8090/products  \
 Type: POST \
 Role: ADMIN\
@@ -306,7 +306,7 @@ Body:
 }
 ```
 
-Description: Assign image to product
+Description: Assign image to product \
 URL: http://localhost:8090/products/1002/image  \
 Type: POST \
 Role: ADMIN\
