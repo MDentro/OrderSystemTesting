@@ -27,7 +27,7 @@
 ## Introduction
 This application is build for a one man business with the possibility to have a different user role for a representative
 (with limited access) in case of absence of the owner. The owner can create, read, update and delete products. 
-The products can get assigned a stock locations. The representative can only read the orders and process a payment. 
+A product can be assigned to a stock location. The representative can only read the orders and process a payment. 
 Orders can be made containing user data and different products. The owner and representative can sign in so endpoints 
 can be protected. 
 Furthermore, images supporting the products can be uploaded and more.
@@ -56,7 +56,7 @@ Furthermore, images supporting the products can be uploaded and more.
   The code editor used during production can be downloaded here: https://www.jetbrains.com/idea/download/#section=windows
 
 * Postman:
-  The application which replaced the frontend can be downloaden here: https://identity.getpostman.com/signup
+  The application which replaced the frontend can be downloaded here: https://identity.getpostman.com/signup
 
 * Maven:
   Which is used as project management tool is already included in IntelliJ IDEA. When using another IDE you can download 
@@ -76,7 +76,7 @@ Furthermore, images supporting the products can be uploaded and more.
 * Step 2: After opening the project Maven will install the necessary dependencies. If this doesn't work automatically 
 please go to the pom.xml file and press the "M" icon in the right corner of the page.
 * Step 3: PostgreSQL is used as a database. If you use a different database please install the right dependency by adding 
-it to the pom.xml and press the "M" icon to install, als insert the correct replacements for all the following steps 
+it to the pom.xml and press the "M" icon to install, also insert the correct replacements for all the following steps 
 concerning PostgreSQL.
 * Step 4: In order to connect the application to PostgreSQL please go to the application properties (can be found in the 
 resources' folder) and change the username and password to your own credentials.
@@ -97,10 +97,10 @@ Please search for the "test" folder in the folder structure and open this. In In
 ![running-tests](assets/RunningTests.JPG)
 
 #### Running tests without coverage
-Please press with your right mouse button on the folder marked with the number 1 and then press with your left mouse button on the number 2
+Please press with your right mouse button on the folder marked with number 1 and then press with your left mouse button on number 2
 
 #### Running tests with coverage
-Please press with your right mouse button on the folder marked with the number 1 and then hover on 2a and then move your mouse to 2b and press with your left mouse button.
+Please press with your right mouse button on the folder marked with number 1 and then hover on 2a and then move your mouse to 2b and press with your left mouse button.
 
 In IntelliJ IDEA it looks like this:\
 ![running-test-instructions](assets/RunningTestInstructions.png)
@@ -264,7 +264,7 @@ Description: Update product \
 URL: http://localhost:8090/products/1003 \
 Type: PUT \
 Role: ADMIN\
-Additional information: In order to update the image please reassign a new image by making use of the Assing image to
+Additional information: In order to update the image please reassign a new image by making use of the assign image to
 product endpoint\
 Authorisation header: Bearer Token\
 Body:
